@@ -1,8 +1,8 @@
 const express = require('express'),
       inventarioModel = require('../models/inventModel'),
       app = express();
-  
-  
+
+
 // Get
 app.get('/', (req, res) => {
     inventarioModel.find().populate('specs').exec((err, inv) => {
